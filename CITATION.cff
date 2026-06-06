@@ -8,9 +8,11 @@ authors:
   - given-names: Muthukumaran
     family-names: Navaneethakrishnan
     orcid: "https://orcid.org/0009-0004-3577-1953"
+    affiliation: "Independent researcher"
   - given-names: "M. K."
     family-names: Haribalaji
     orcid: "https://orcid.org/0009-0002-8964-2212"
+    affiliation: "Independent researcher"
 keywords:
   - data leakage
   - differentiable trading
