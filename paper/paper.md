@@ -7,7 +7,7 @@ author:
   - name: M. K. Haribalaji
     orcid: 0009-0002-8964-2212
     affiliation: Independent researcher
-date: TODO
+date: 2026-06-06
 abstract: |
   We train neural models end-to-end against a profit-and-loss objective to
   forecast next-session cross-sectional positions on Indian large-caps (NSE;
