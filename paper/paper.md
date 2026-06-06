@@ -1,8 +1,12 @@
 ---
 title: "Leakage Is a Moving Target: A Field Guide to Self-Deception in Differentiable Cross-Sectional Trading"
 author:
-  - Muthukumaran Navaneethakrishnan
-  - M. K. Haribalaji
+  - name: Muthukumaran Navaneethakrishnan
+    orcid: 0009-0004-3577-1953
+    affiliation: TODO
+  - name: M. K. Haribalaji
+    orcid: 0009-0002-8964-2212
+    affiliation: TODO
 date: TODO
 abstract: |
   TODO — one paragraph. End-to-end differentiable models trained against a

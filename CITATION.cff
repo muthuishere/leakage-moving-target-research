@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Leakage Is a Moving Target: A Field Guide to Self-Deception in Differentiable Cross-Sectional Trading"
+type: software
+license: MIT
+repository-code: "https://github.com/muthuishere/leakage-moving-target-research"
+authors:
+  - given-names: Muthukumaran
+    family-names: Navaneethakrishnan
+    orcid: "https://orcid.org/0009-0004-3577-1953"
+  - given-names: "M. K."
+    family-names: Haribalaji
+    orcid: "https://orcid.org/0009-0002-8964-2212"
+keywords:
+  - data leakage
+  - differentiable trading
+  - cross-sectional equity
+  - walk-forward validation
+  - negative controls
+  - financial machine learning
+  - reproducibility

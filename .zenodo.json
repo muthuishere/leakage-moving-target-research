@@ -1,0 +1,30 @@
+{
+  "title": "Leakage Is a Moving Target: A Field Guide to Self-Deception in Differentiable Cross-Sectional Trading",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "End-to-end differentiable models trained against a P&L objective find no tradeable edge on Indian large-caps (NSE; 5-ticker, NIFTY 50, NIFTY 100) across several signal families. The contribution is the negative-control gates that earn the null result: an escape-route taxonomy of how the optimiser manufactures fake edges (scale-invariance collapse, cross-stock identity memorisation, regime-dependent detector blindness) and the small, runnable probes that catch each. Positioned against Nikolopoulos (arXiv:2604.15531, concurrent) and the selection-bias line of Lopez de Prado and Bailey.",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Navaneethakrishnan, Muthukumaran",
+      "orcid": "0009-0004-3577-1953",
+      "affiliation": "TODO"
+    },
+    {
+      "name": "Haribalaji, M. K.",
+      "orcid": "0009-0002-8964-2212",
+      "affiliation": "TODO"
+    }
+  ],
+  "keywords": [
+    "data leakage",
+    "differentiable trading",
+    "cross-sectional equity",
+    "walk-forward validation",
+    "negative controls",
+    "financial machine learning",
+    "reproducibility",
+    "NIFTY"
+  ]
+}
