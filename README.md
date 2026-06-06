@@ -24,6 +24,8 @@ uv sync
 uv run demos/01_structural_vs_time_leakage.py
 uv run demos/02_identity_leakage.py
 uv run demos/03_look_ahead_cheat.py
+uv run demos/04_permutation_invariance.py
+uv run demos/05_window_robustness.py
 ```
 
 Everything runs on CPU against seeded synthetic panels — each demo takes
@@ -35,11 +37,11 @@ from ~40 s to a couple of minutes (demo 1 runs a bootstrap null).
 |---|---|---|---|
 | A real edge is a *time* edge; permuting time must kill it | `shuffled_target_test` — `src/leakage_harness/leakage_tests.py` | `demos/01_structural_vs_time_leakage.py` | §6 |
 | Per-stock identity memorisation (survives shuffled_target) | `static_features_test` — `src/leakage_harness/stability_tests.py` | `demos/02_identity_leakage.py` | §4 |
-| Ticker labels carry no physics; renaming must not change Sharpe | `permutation_invariance_test` — `stability_tests.py` | TODO | §4 |
-| Window-position artifact (Sharpe must hold across holdout sizes) | `window_robustness_test` — `stability_tests.py` | TODO | §7 |
+| Ticker labels carry no physics; renaming must not change Sharpe | `permutation_invariance_test` — `stability_tests.py` | `demos/04_permutation_invariance.py` | §4 |
+| Window-position artifact (Sharpe must hold across holdout sizes) | `window_robustness_test` — `stability_tests.py` | `demos/05_window_robustness.py` | §7 |
 | Positive control: a planted future feature MUST be detected | `look_ahead_cheat_test` — `leakage_tests.py` | `demos/03_look_ahead_cheat.py` | §3 |
 | Closed-form Sharpe SE under-states the null ~6x at small N | `shuffled_target_test(bootstrap_k=...)` — `leakage_tests.py` | `demos/01_structural_vs_time_leakage.py` | §6 |
-| Scale-invariance of differentiable Sharpe (positions → 0) | `sharpe_with_position_floor` — `losses.py`; signature-dispatch in `walk_forward.py` | TODO | §3 |
+| Scale-invariance of differentiable Sharpe (positions → 0) | `sharpe_with_position_floor` — `losses.py`; signature-dispatch in `walk_forward.py` | — (see §3) | §3 |
 
 ## Layout
 
