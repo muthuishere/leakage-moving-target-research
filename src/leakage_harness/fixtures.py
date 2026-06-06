@@ -29,6 +29,7 @@ def planted_panel(
     time_edge: float = 0.0,
     identity_drift: float = 0.0,
     noise: float = 1.0,
+    edge_end: int | None = None,
     seed: int = 20260606,
 ) -> tuple[torch.Tensor, torch.Tensor]:
     """Return ``(features [T, S, F], returns [T, S])``.
@@ -38,6 +39,13 @@ def planted_panel(
 
     feature 0 is the (time-varying) predictive driver; feature 1 is a
     constant-over-time per-stock identity tag; the rest are pure noise.
+
+    ``edge_end``: if set, the time-edge is present only in returns up to
+    day ``edge_end`` and the rest of the series is pure noise — a
+    non-stationary / window-position artifact. A short holdout that lands
+    in the signal regime looks strong; a long holdout dilutes it into the
+    noise tail. Used by the window-robustness demo. ``None`` (default) =
+    a stationary edge across the whole series.
     """
     gen = torch.Generator().manual_seed(seed)
 
@@ -55,7 +63,11 @@ def planted_panel(
     returns = noise * eps.clone()
     # time edge: driver at t-1 drives return at t (so features[t] -> returns[t+1]).
     if time_edge != 0.0:
-        returns[1:] += time_edge * driver[:-1]
+        contrib = time_edge * driver[:-1]  # [T-1, S]; contrib[i] feeds returns[i+1]
+        if edge_end is not None:
+            contrib = contrib.clone()
+            contrib[edge_end:] = 0.0  # edge confined to the early regime
+        returns[1:] += contrib
     # identity drift: persistent per-stock return, recoverable from the
     # constant identity feature without any time information.
     if identity_drift != 0.0:
