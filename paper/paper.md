@@ -197,7 +197,10 @@ leaves that cross-sectional structure intact, so a return-shuffle test —
 the standard first-line leakage check — passes the model through.
 
 This is the batch-effect problem [@batcheffects] in equity clothing: a
-per-group bookkeeping quantity becomes a label the model can exploit. We
+per-group bookkeeping quantity becomes a label the model can exploit —
+a shortcut in the sense of @geirhos2020shortcut, a decision rule that
+scores well in-sample yet rests on a spurious cue rather than the
+intended signal. We
 found it acutely when features were standardised *per stock*: the per-ticker
 scale `σ_ticker` encodes ticker identity, and a model can recover the
 cross-sectional ranking from a noise-only panel. Swapping per-stock
