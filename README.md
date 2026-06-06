@@ -31,6 +31,14 @@ uv run demos/05_window_robustness.py
 Everything runs on CPU against seeded synthetic panels — each demo takes
 from ~40 s to a couple of minutes (demo 1 runs a bootstrap null).
 
+The rendered manuscript is committed at `paper/paper.pdf`. To re-render
+(needs `pandoc` + `typst`):
+
+```sh
+pandoc paper/paper.md --citeproc --bibliography=paper/references.bib \
+  --pdf-engine=typst -o paper/paper.pdf
+```
+
 ## What each gate catches
 
 | Finding | Gate (file) | Demo | Paper § |
