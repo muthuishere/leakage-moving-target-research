@@ -9,7 +9,8 @@ models that carry *per-stock parameters* — those memorise a
 The harness's StrategyNet is a SHARED-WEIGHT, permutation-equivariant net
 (one MLP applied to every stock, then a cross-sectional de-mean), so it
 satisfies this control essentially by construction: base and permuted runs
-produce the same Sharpe (Δ ~ 0) and the gate passes. We show that here as a
+produce a small Δsharpe within the null bound and the gate passes (the only
+gap comes from dropout masks not following the stock relabelling). We show that here as a
 sanity check — and note honestly that this gate only bites against a
 per-stock-parameterised model, which this architecture is not.
 
@@ -25,7 +26,7 @@ N_TRAIN, N_HOLDOUT = 60, 120
 
 
 def main() -> None:
-    features, returns = planted_panel(T=240, S=16, time_edge=0.3, noise=1.0)
+    features, returns = planted_panel(T=240, S=16, time_edge=0.15, noise=1.0)
     gate = permutation_invariance_test(
         features, returns,
         n_train=N_TRAIN, n_holdout=N_HOLDOUT,

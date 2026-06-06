@@ -37,8 +37,8 @@ def run(label: str, **panel_kwargs) -> None:
 
 def main() -> None:
     print("=== Demo 5: window robustness ===")
-    run("stationary edge",   time_edge=0.3, edge_end=None)
-    run("regime-shifted edge", time_edge=0.3, edge_end=100)
+    run("stationary edge",   time_edge=0.15, edge_end=None)
+    run("regime-shifted edge", time_edge=0.15, edge_end=100)
 
 
 if __name__ == "__main__":
