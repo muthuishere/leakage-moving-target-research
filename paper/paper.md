@@ -335,7 +335,8 @@ honestly, and faster.
 
 All gates and demos are available at
 <https://github.com/muthuishere/leakage-moving-target-research> and archived
-at Zenodo (DOI: TODO). The demos reproduce every illustrative number against
+at Zenodo (DOI: [10.5281/zenodo.20572397](https://doi.org/10.5281/zenodo.20572397),
+concept DOI — resolves to the latest version). The demos reproduce every illustrative number against
 seeded synthetic fixtures with no external data dependency.
 
 # References

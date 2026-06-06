@@ -1,5 +1,7 @@
 # Leakage Is a Moving Target
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20572397.svg)](https://doi.org/10.5281/zenodo.20572397)
+
 **A field guide to self-deception in differentiable cross-sectional trading.**
 
 End-to-end differentiable models trained against a P&L objective are

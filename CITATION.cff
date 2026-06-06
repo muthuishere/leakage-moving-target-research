@@ -4,6 +4,7 @@ title: "Leakage Is a Moving Target: A Field Guide to Self-Deception in Different
 type: software
 license: MIT
 repository-code: "https://github.com/muthuishere/leakage-moving-target-research"
+doi: "10.5281/zenodo.20572397"
 authors:
   - given-names: Muthukumaran
     family-names: Navaneethakrishnan
